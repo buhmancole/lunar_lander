@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>CS 5410 HW1</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel="stylesheet" href="style.css">
+	</head>
+	
+	<body>
+		<main>
+			<section id="mainmenu">
+				<h1>Lunar Lander Game</h1>
+				<button onclick="showScreen('game')">New Game</button>
+				<button onclick="showScreen('highscores')">High Scores</button>
+				<button onclick="showScreen('howto')">Guide/Controls</button>
+				<button onclick="showScreen('credits')">Credits</button>
+			</section>
+			<section id="game">
+				<canvas id="canvas" width="1000" height="1000"></canvas>
+			</section>
+			<section id="highscores">
+				<h1>High Scores</h1>
+				<div id="scores">
+					<p>None</p>
+				</div>
+			</section>
+			<section id='howto'>
+				<h1>Instructions</h1>
+				<p>Land the thruster on one of the flat platforms with a safe (green) speed and angle</p>
+				<h1>Controls</h1>
+				<div>
+					<div>
+						<label>Thrust: </label>
+						<button id="thrust" onclick="updateKey('thrust')">w</button>
+					</div>
+					<div>
+						<label>Rotate Left: </label>
+						<button id="rotateLeft" onclick="updateKey('rotateLeft')">a</button>
+					</div>
+					<div>
+						<label>Rotate Right: </label>
+						<button id="rotateRight" onclick="updateKey('rotateRight')">d</button>
+					</div>
+				</div>
+			</section>
+			<section id='credits'>
+				<h1>Credits</h1>
+				<p>Made by Cole Buhman (A02228854) for CS 5410</p>
+			</section>
+		</main>
+		
+		<script src="scripts/input.js"></script>
+		<script src="scripts/particles.js"></script>
+		<script src="scripts/gamemodel.js"></script>
+		<script src="scripts/lander.js"></script>
+		<script src="scripts/render.js"></script>
+		<script src="scripts/main.js"></script>
+		<script src="scripts/menu.js"></script>
+	</body>
+</html>
